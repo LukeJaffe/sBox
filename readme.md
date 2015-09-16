@@ -1,17 +1,22 @@
 # sBox #
 
 Mac Setup Instructions:
+- install openjdk 7
+- install android sdk
+    - launch the android sdk manager and install dependencies
 - install Homebrew (you will have to figure this out)
 - open console
 - type:
     - brew update
-    - brew install android-sdk
     - brew install ant
     - brew install git
 - to install project in a directory type:
     - git clone /home/jaffe5/Projects/capstone/code/sBox
 - enter the project directory: install_location/sBox
 - enter the test_app directory: install_location/sBox/test_app 
+- open the local.properties file
+    - change the value of sdk.dir to the location of your android-sdk installation
+    - save and close the local.properties file
 - to build the app type:
     - ant clean debug
 - to install the app on a running emulator or physical device type:
