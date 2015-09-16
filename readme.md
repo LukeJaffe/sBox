@@ -1,11 +1,13 @@
 # sBox #
 
 Mac Setup Instructions:
+- install Homebrew (you will have to figure this out)
 - open console
 - type:
     - brew update
-    - brew install git
+    - brew install android-sdk
     - brew install ant
+    - brew install git
 - to install project in a directory type:
     - git clone /home/jaffe5/Projects/capstone/code/sBox
 - enter the project directory: install_location/sBox
