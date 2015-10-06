@@ -1,5 +1,3 @@
-# sBox #
-
 Mac Setup Instructions:
 - install openjdk 7
 - install android sdk
@@ -11,7 +9,7 @@ Mac Setup Instructions:
     - brew install ant
     - brew install git
 - to install project in a directory type:
-    - git clone /home/jaffe5/Projects/capstone/code/sBox
+    - git clone https://github.com/LukeJaffe/sBox.git
 - enter the project directory: install_location/sBox
 - enter the test_app directory: install_location/sBox/test_app 
 - open the local.properties file
