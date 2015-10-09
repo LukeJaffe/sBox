@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="hello">Hello World, SPIMasterDemoActivity!</string>
+    <string name="app_name">SPIMasterDemo</string>
+    <string name="clockPhase">Clock/Phase</string>    
+	<string-array name="clock_phase">        
+		<item>CPOL=0, CPHA=0 (mode 0)</item>        
+		<item>CPOL=0, CPHA=1 (mode 1)</item>        
+		<item>CPOL=1, CPHA=0 (mode 2)</item>
+		<item>CPOL=1, CPHA=1 (mode 3)</item>        
+	</string-array>
+	<string-array name="data_order">
+		<item >MSB</item>
+		<item >LSB</item>
+	</string-array>
+	<string name="dataOrder">Data Order</string>
+</resources>

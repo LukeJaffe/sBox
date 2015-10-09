@@ -1,0 +1,51 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="app_name">命令行終端</string>
+    
+    <string name="help_prompt">鍵入 \'help\' 以列出可用指令</string>
+    <string name="help_commands">可用指令:</string>
+    <string name="ls_fullmode_on">已開啟 ls 列印詳情</string>
+    <string name="ls_fullmode_off">已關閉 ls 列印詳情</string>
+    
+    <string name="error_prefix">錯誤:\u0020</string>
+    <string name="error_not_dir">\u0020不是目錄</string>
+    <string name="error_cant_del">未能刪除\u0020</string>
+    <string name="error_path_exists">\u0020已存在</string>
+    <string name="error_create_dir">未能創建目錄\u0020</string>
+    <string name="error_cant_ren">未能更改 %1$s 為 %2$s</string>
+    <string name="error_notfile_notexist">\u0020不是檔案或不存在</string>
+    <string name="error_cant_cp">未能複製 %1$s 至 %2$s</string>
+    <string name="error_history_id_not_found">歷史索引不存在</string>
+    <string name="error_unknown_cmd">不明指令 --\u0020</string>
+    <string name="error_cant_cd_dir">不能切換到\u0020</string>
+    <string name="error_target_not_dir">目標不是目錄\u0020</string>
+    <string name="error_target_dir_cant_read">不能讀取目標目錄\u0020</string>
+    <string name="error_unknown_fontsize">不明字體大小</string>
+    
+    <string name="menu_kill_running_app">強制結束程序</string> 
+    <string name="menu_kill_console">強制結束本終端</string>
+    
+    <string name="display_height">屏幕高度</string>
+    <string name="display_width">屏幕闊度</string>
+    <string name="metrics_density">邏輯像素密度</string>
+    <string name="metrics_densityDpi">像素密度 Dpi</string>
+    <string name="metrics_scaledDensity">像素密度比例</string>
+    <string name="metrics_heightPixels">高度(像素)</string>
+    <string name="metrics_widthPixels">闊度(像素)</string>
+    <string name="metrics_xdpi">每英寸物理像素(X 維度)</string>
+    <string name="metrics_ydpi">每英寸物理像素(Y 維度)</string>
+    
+    <string name="netinfo_wifiinfo">Wifi 資訊</string>
+    <string name="netinfo_macaddr">Mac 地址</string>
+    <string name="netinfo_ssid">SSID</string>
+    <string name="netinfo_ipaddr">IP 地址</string>
+    <string name="netinfo_netmask">網絡遮罩</string>
+    <string name="netinfo_gateway">網關</string>
+    <string name="netinfo_dns1">域名服務器 1</string>
+    <string name="netinfo_dns2">域名服務器 2</string>
+    
+    <string name="netinfo_netintf_name">網絡介面</string>
+    
+    <string name="current_fontsize">字體大小</string>
+    <string name="external_program_running">外部程序正在執行</string>
+</resources>

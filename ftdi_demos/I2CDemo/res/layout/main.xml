@@ -1,0 +1,512 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="horizontal"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    >
+     <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    	android:orientation="vertical"
+    	android:layout_width="fill_parent"
+    	android:layout_height="fill_parent"
+    >
+    
+<!-- Rrequency Setting -->
+    <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    android:layout_margin="1dip"
+    android:tag="Frequency block"
+    android:layout_weight="1.5"
+    >   
+	     
+	     <TextView android:text = "Frequency (KHz)" 
+		 			android:textStyle="bold"
+		 			android:gravity="center"
+		 			android:id="@+id/Frequency"
+		 			android:layout_height="fill_parent"
+		 			android:layout_width="fill_parent"
+		 			android:layout_weight="1"
+		 			/>
+	        	 			
+		 <EditText android:id="@+id/FrequencyValue"
+		 			android:digits="0123456789"
+		 			android:layout_height="fill_parent"
+		 			android:layout_width="fill_parent"
+		 			android:layout_margin="2dip"
+		 			android:lines="1"
+		 			android:maxLength="2"
+		 			android:text="92"
+		 			android:background="#708070"
+		 			android:cursorVisible="false"
+		 			android:gravity="center"
+		 			android:layout_weight="1"
+		 			/>
+	     
+	     <TextView android:id="@+id/FrequencyValue1"
+	     			android:text="23"
+		 			android:numeric="integer"
+		 			android:maxLength="2"
+		 			android:gravity="center"
+		 			android:visibility="invisible"
+		 			android:layout_height="50dip"
+		 			android:layout_width="50dip"
+		 			android:background="#fff"
+		 			android:textColor="#000"
+		 			android:layout_marginLeft="30dip"
+
+		 			/>
+	 	 <TextView android:id="@+id/FrequencyValue2"
+     			android:text="44"
+	 			android:numeric="integer"
+	 			android:maxLength="2"
+	 			android:gravity="center"
+	 			android:visibility="invisible"
+	 			android:layout_height="50dip"
+	 			android:layout_width="50dip"
+	 			android:background="#fff"
+	 			android:textColor="#000"
+	 			android:layout_marginLeft="10dip"
+
+	 			/>
+     
+     		 <TextView android:id="@+id/FrequencyValue3"
+     			android:text="60"
+	 			android:numeric="integer"
+	 			android:maxLength="2"
+	 			android:gravity="center"
+	 			android:visibility="invisible"
+	 			android:layout_height="50dip"
+	 			android:layout_width="50dip"
+	 			android:background="#fff"
+	 			android:textColor="#000"
+	 			android:layout_marginLeft="10dip"
+
+	 			/>
+	 			
+	 		 <TextView android:id="@+id/FrequencyValue4"
+     			android:text="92"
+	 			android:numeric="integer"
+	 			android:maxLength="2"
+	 			android:gravity="center"
+	 			android:visibility="invisible"
+	 			android:layout_height="50dip"
+	 			android:layout_width="50dip"
+	 			android:background="#fff"
+	 			android:textColor="#000"
+	 			android:layout_marginLeft="10dip"
+
+	 			/>
+			<Button android:id="@+id/FrequencyButton"
+		 			android:layout_height="fill_parent"
+		 			android:layout_width="fill_parent"
+					android:layout_margin="0dp"
+		 			android:gravity="center"
+		 			android:background="@drawable/button_pattern"
+		 			android:layout_weight="1"
+		 			android:text="Set Frequency"
+		 			/>	 		
+
+		 			
+			<Button android:id="@+id/resetButton"
+		 			android:layout_height="fill_parent"
+		 			android:layout_width="fill_parent"
+					android:layout_margin="0dp"
+		 			android:gravity="center"
+		 			android:background="@drawable/button_pattern_reset"
+		 			android:layout_weight="1"
+		 			android:text="Reset"
+		 			/>  
+    
+    </LinearLayout>
+    
+    
+<!-- Read Setting -->
+	<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    android:layout_margin="1dip"
+    android:tag="Read block"
+    android:background="#505050"
+    android:layout_weight="1"
+    >
+
+<!-- Read 1 -->	
+    	 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    	android:orientation="vertical"
+    	android:layout_width="fill_parent"
+    	android:layout_height="fill_parent"
+    	android:layout_marginTop="1dip"
+    	android:layout_weight="1.5"
+    	>
+		     
+		     <TextView android:text="Read"
+		     			android:id="@+id/ReadBlock"
+		     			android:layout_height="fill_parent"
+		     			android:layout_width="fill_parent"
+		     			android:layout_margin="2dip"
+		     			android:background="#408040"
+		     			android:gravity="center"
+		     			android:layout_weight="1"
+		     			/>
+		     			
+			     			
+			 <TextView android:text = "Device Address" 
+			 			android:textStyle="bold"
+			 			android:gravity="center"
+			 			android:id="@+id/ReadDeviceAddress"
+			 			android:layout_height="fill_parent"
+			 			android:layout_width="fill_parent"
+			 			android:layout_weight="1"
+			 			/>
+
+			
+			<TextView android:text = "Address" 
+			 			android:textStyle="bold"
+			 			android:gravity="center"
+			 			android:id="@+id/MemoryAddress"
+			 			android:layout_height="fill_parent"
+			 			android:layout_width="fill_parent"
+			 			android:layout_weight="1"
+			 			/>
+			
+			 <TextView android:text = "Number Bytes" 
+			 			android:textStyle="bold"
+			 			android:gravity="center"
+			 			android:id="@+id/NumberOfBytes"
+			 			android:layout_height="fill_parent"
+			 			android:layout_width="fill_parent"
+			 			android:layout_weight="1"
+			 			/>
+			 			
+
+		</LinearLayout>
+		
+<!-- Read 2 -->	
+    	 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    	android:orientation="vertical"
+    	android:layout_width="fill_parent"
+    	android:layout_height="fill_parent"
+    	android:layout_marginTop="1dip"    	
+    	android:layout_weight="1.5"
+    	>			 			
+		     <TextView android:text=""
+		     			android:id="@+id/REmptyBlock"
+		     			android:layout_height="fill_parent"
+		     			android:layout_width="fill_parent"
+		     			android:gravity="center"
+		     			android:layout_weight="1"
+		     			/>
+    	     			 			
+			 <EditText android:id="@+id/DeviceAddressValue"
+			 			android:numeric="integer"
+			 			android:digits="0123456789abcdefABCDEF"
+			 			android:layout_height="fill_parent"
+			 			android:layout_width="fill_parent"
+			 			android:lines="1"
+			 			android:maxLength="3"
+			 			android:gravity="center"
+			 			android:layout_weight="1"
+			 			/>
+						 
+			 <EditText android:id="@+id/MemoryAddressValue"
+			 			android:numeric="integer"
+			 			android:digits="0123456789abcdefABCDEF"
+			 			android:layout_height="fill_parent"
+			 			android:layout_width="fill_parent"
+			 			android:lines="1"
+			 			android:maxLength="3"
+			 			android:gravity="center"
+			 			android:layout_weight="1"
+			 			/>
+			     	     
+			 <EditText android:id="@+id/NumberOfBytesValue"
+			 			android:numeric="integer"
+			 			android:digits="0123456789abcdefABCDEF"
+			 			android:layout_height="fill_parent"
+			 			android:layout_width="fill_parent"
+			 			android:lines="1"
+			 			android:maxLength="6"
+			 			android:gravity="center"
+			 			android:layout_weight="1"
+			 			/>			 
+		</LinearLayout> 
+			 
+<!-- Read 3 -->	
+    	 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    	android:orientation="vertical"
+    	android:layout_width="fill_parent"
+    	android:layout_height="fill_parent"
+    	android:layout_marginTop="5dip"
+    	android:layout_marginBottom="5dip"
+    	android:layout_weight="1.5"
+    	> 
+			  <TextView android:text = "Read Bytes" 
+			 			android:textStyle="bold"
+			 			android:gravity="center"
+			 			android:id="@+id/ReadBytes"
+			 			android:layout_height="fill_parent"
+			 			android:layout_width="fill_parent"
+			 			android:layout_weight="1"
+			 			/>
+			 			
+
+		 			
+		 		<TextView android:id="@+id/StatusText"
+		 				  android:text="Status"
+		 				  android:gravity="center"
+		 				  android:layout_height="fill_parent"
+		 				  android:layout_width="fill_parent"
+		 				  android:layout_weight="3"
+		 				  />	
+
+		</LinearLayout>
+			 			
+<!-- Read 4 -->	
+    	 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    	android:orientation="vertical"
+    	android:layout_width="fill_parent"
+    	android:layout_height="fill_parent"
+    	android:layout_marginTop="2dip"
+    	android:layout_marginBottom="2dip"
+    	android:layout_weight="1"
+    	>
+			 	<EditText android:id="@+id/ReadValues"
+			 			android:numeric="integer"
+			 			android:digits="0123456789,"
+			 			android:layout_height="fill_parent"
+			 			android:layout_width="fill_parent"
+			 			android:layout_margin="1dip"			 			
+			 			android:gravity="left|center_vertical"
+			 			android:lines="5"
+			 			android:background="#708070"
+			 			android:focusableInTouchMode="false"
+			 			android:layout_weight="1"
+			 			/>		
+			 			
+			 		<EditText android:id="@+id/StatusValues"
+			 			android:digits="0123456789abcdef"
+			 			android:layout_height="fill_parent"
+			 			android:layout_width="fill_parent"
+			 			android:layout_margin="1dip"			 			
+			 			android:maxLength="120"
+			 			android:gravity="center"
+			 			android:background="#708070"
+			 			android:focusableInTouchMode="false"
+			 			android:layout_weight="3"
+			 			/>			 				 		
+    	</LinearLayout>
+<!-- Read 5 -->	
+    	 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    	android:orientation="vertical"
+    	android:layout_width="fill_parent"
+    	android:layout_height="fill_parent"
+    	android:layout_marginTop="2dip"
+    	android:layout_marginBottom="2dip"
+    	android:layout_weight="1.5"
+    	> 		 
+			<Button android:id="@+id/ReadButton"
+		 			android:layout_height="fill_parent"
+		 			android:layout_width="fill_parent"
+					android:layout_margin="5dp"
+		 			android:gravity="center"
+		 			android:background="@drawable/button_pattern"
+		 			android:layout_weight="1"
+		 			android:text="Read"
+		 			/>    				
+
+		</LinearLayout>	
+	</LinearLayout>
+<!-- End of Write -->    
+
+
+<!-- Write Setting -->
+	<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    android:layout_margin="1dip"
+    android:tag="Write block"
+    android:background="#505050"
+    android:layout_weight="1"
+    >
+
+<!-- Write 1 -->	
+    	 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    	android:orientation="vertical"
+    	android:layout_width="fill_parent"
+    	android:layout_height="fill_parent"
+    	android:layout_margin="1dip"
+    	android:layout_weight="1.5"
+    	>
+		     
+		     <TextView android:text="Write"
+		     			android:id="@+id/WriteBlock"
+		     			android:layout_height="fill_parent"
+		     			android:layout_width="fill_parent"
+		     			android:gravity="center"
+		     			android:layout_margin="2dip"
+		     			android:background="#408040"
+		     			android:layout_weight="1"
+		     			/>
+		     			
+			     			
+			 <TextView android:text = "Device Address" 
+			 			android:textStyle="bold"
+			 			android:gravity="center"
+			 			android:id="@+id/WriteDeviceAddress"
+			 			android:layout_height="fill_parent"
+			 			android:layout_width="fill_parent"
+			 			android:layout_weight="1"
+			 			/>
+
+			
+			<TextView android:text = "Address" 
+			 			android:textStyle="bold"
+			 			android:gravity="center"
+			 			android:id="@+id/WriteMemoryAddress"
+			 			android:layout_height="fill_parent"
+			 			android:layout_width="fill_parent"
+			 			android:layout_weight="1"
+			 			/>
+			
+			 <TextView android:text = "Number Bytes" 
+			 			android:textStyle="bold"
+			 			android:gravity="center"
+			 			android:id="@+id/WriteNumberOfBytes"
+			 			android:layout_height="fill_parent"
+			 			android:layout_width="fill_parent"
+			 			android:layout_weight="1"
+			 			/>
+			 			
+
+		</LinearLayout>
+		
+<!-- Write 2 -->	
+    	 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    	android:orientation="vertical"
+    	android:layout_width="fill_parent"
+    	android:layout_height="fill_parent"
+    	android:layout_margin="1dip"    	    	
+    	android:layout_weight="1.5"
+    	>			 			
+			 <TextView android:text=""
+		     			android:id="@+id/WEmptyBlock"
+		     			android:layout_height="fill_parent"
+		     			android:layout_width="fill_parent"
+		     			android:gravity="center"
+		     			android:layout_weight="1"
+		     			/>
+    	     			 			
+			 <EditText android:id="@+id/WriteDeviceAddressValue"
+			 			android:numeric="integer"
+			 			android:digits="0123456789abcdefABCDEF"
+			 			android:layout_height="fill_parent"
+			 			android:layout_width="fill_parent"
+			 			android:lines="1"
+			 			android:maxLength="3"
+			 			android:gravity="center"
+			 			android:layout_weight="1"
+			 			/>
+						 
+			 <EditText android:id="@+id/WriteMemoryAddressValue"
+			 			android:numeric="integer"
+			 			android:digits="0123456789abcdefABCDEF"
+			 			android:layout_height="fill_parent"
+			 			android:layout_width="fill_parent"
+			 			android:lines="1"
+			 			android:maxLength="3"
+			 			android:gravity="center"
+			 			android:layout_weight="1"
+			 			/>
+			     	     
+			 <EditText android:id="@+id/WriteNumberOfBytesValue"
+			 			android:layout_height="fill_parent"
+			 			android:layout_width="fill_parent"
+			 			android:lines="1"
+			 			android:gravity="center"
+			 			android:layout_weight="1"
+			 			/>			 
+		</LinearLayout> 
+			 
+<!-- Write 3 -->	
+    	 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    	android:orientation="vertical"
+    	android:layout_width="fill_parent"
+    	android:layout_height="fill_parent"
+    	android:layout_margin="1dip"
+    	android:layout_weight="1.5"
+    	> 
+			  <TextView android:text = "Write Bytes" 
+			 			android:textStyle="bold"
+			 			android:gravity="center"
+			 			android:id="@+id/WriteBytes"
+			 			android:layout_height="fill_parent"
+			 			android:layout_width="fill_parent"
+			 			android:layout_weight="1"
+			 			/>
+			 			
+
+		 			
+		 		<TextView android:id="@+id/WriteStatusText"
+		 				  android:text="Status"
+		 				  android:gravity="center"
+		 				  android:layout_height="fill_parent"
+		 				  android:layout_width="fill_parent"
+		 				  android:layout_weight="3"
+		 				  />	
+
+		</LinearLayout>
+			 			
+<!-- Write 4 -->	
+    	 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    	android:orientation="vertical"
+    	android:layout_width="fill_parent"
+    	android:layout_height="fill_parent"
+    	android:layout_margin="1dip"
+    	android:layout_weight="1"
+    	>
+			 	<EditText android:id="@+id/WriteValues"
+			 			android:layout_height="fill_parent"
+			 			android:layout_width="fill_parent"
+			 			android:layout_margin="1dip"
+			 			android:editable="true"
+			 			android:gravity="left|center_vertical"
+			 			android:lines="5"
+			 			android:background="#708070"
+			 			android:layout_weight="1"
+			 			/>		
+			 			
+			 		<EditText android:id="@+id/WriteStatusValues"
+			 			android:digits="0123456789abcdef"
+			 			android:layout_height="fill_parent"
+			 			android:layout_width="fill_parent"
+			 			android:layout_margin="1dip"			 			
+			 			android:maxLength="120"
+			 			android:gravity="center"
+			 			android:background="#708070"
+			 			android:focusableInTouchMode="false"
+			 			android:layout_weight="3"
+			 			/>			 				 		
+    	</LinearLayout>
+<!-- Write 5 -->	
+    	 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    	android:orientation="vertical"
+    	android:layout_width="fill_parent"
+    	android:layout_height="fill_parent"
+    	android:layout_margin="2dip"
+    	android:layout_weight="1.5"
+    	> 	
+			<Button android:id="@+id/WriteButton"
+		 			android:layout_height="fill_parent"
+		 			android:layout_width="fill_parent"
+					android:layout_margin="5dp"
+		 			android:gravity="center"
+		 			android:background="@drawable/button_pattern"
+		 			android:layout_weight="1"
+		 			android:text="Write"
+		 			/>    				
+		</LinearLayout>	
+	</LinearLayout>
+<!-- End of Write -->
+		
+	</LinearLayout>
+</LinearLayout>

@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<!--  <usb-accessory model="FTDISliderDemoKit" manufacturer="FTDI" version="1.0"/> -->
+<resources>    
+	<usb-accessory model="FTDISliderDemoKit" manufacturer="FTDI" version="1.0"/>
+</resources>

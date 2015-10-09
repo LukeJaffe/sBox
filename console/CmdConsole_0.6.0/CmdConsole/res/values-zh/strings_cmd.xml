@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="cmd_help">鍵入 \'help [指令]\' 以展示指令詳情\n</string>
+    <string name="cmd_unknown">不明指令</string>
+    <string name="cmd_ls">列出檔案和目錄\n
+                          > ls\n
+                          > ls [目標目錄]\n\n
+                                                                    開啟/關閉列出檔案和目錄詳情\n
+                          > ls -f\n</string>
+    <string name="usage_ls">格式: ls [dest dir]</string>
+    <string name="cmd_pwd">打印當前路徑\n</string>
+    <string name="cmd_cd">轉換當前工作目錄至目標目錄\n
+                          > cd /path/to/dir\n</string>
+    <string name="usage_cd">格式: cd [directory]</string>
+    <string name="cmd_clear">清除螢幕\n</string>
+    <string name="cmd_run">執行 apk\n
+                           > run /path/to/apk [args]\n</string>
+    <string name="usage_run">格式: run /path/to/apk [args]</string>
+    <string name="cmd_history">列印指令歷史\n
+                                                                                  請用 \'!\' 和對應的指令索引來重覆指令\n
+                                                                                  例如\n
+                               > !100\n</string>
+    <string name="cmd_del">移除檔案或空目錄\n
+                           > del /path/to/file\n
+                           > del /path/to/dir\n</string>
+    <string name="usage_del">格式: del /path/to/file</string>
+    <string name="cmd_mkdir">創建目錄\n
+                             > mkdir /path/to/dir\n</string>
+    <string name="usage_mkdir">格式: mkdir /path/to/dir</string>
+    <string name="cmd_ren">重命名檔案或目錄\n
+                           > ren path/to/src path/to/dest\n</string>
+    <string name="usage_ren">格式: ren /path/to/src /path/to/dest</string>
+    <string name="cmd_cp">複製檔案\n
+                          > cp /path/to/srcfile /path/to/destfile\n</string>
+    <string name="usage_cp">格式: cp /path/to/srcfile /path/to/destfile</string>
+    <string name="cmd_cleardex">清除緩存的 dex 檔案\n</string>
+    <string name="cmd_ver">打印版本號\n</string>
+    <string name="cmd_sres">顯示屏幕解像度資訊\n</string>
+    <string name="cmd_netinfo">顯示網絡資訊\n</string>
+    <string name="cmd_fontsize">顯示/設置字體大小\n
+                                > fontsize\n
+                                > fontsize [BIG | MEDIUM | SMALL]\n</string>
+    <string name="usage_fontsize">格式: \n
+                             > fontsize\n
+                             > fontsize [BIG | MEDIUM | SMALL]\n</string>
+    <string name="cmd_exit">離開命令終端\n</string>
+    
+</resources>

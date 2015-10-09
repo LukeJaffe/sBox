@@ -1,0 +1,395 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    android:background="#101010"
+    android:orientation="vertical" >
+	
+<!-- set -->
+    <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    android:background="#505050"
+    android:layout_margin="3dip"
+    android:layout_weight="1"   
+    android:descendantFocusability="beforeDescendants"
+	android:focusableInTouchMode="true" 
+    >
+
+		<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    	android:layout_width="fill_parent"
+   	 	android:layout_height="fill_parent"
+   	 	android:orientation="vertical"
+   	 	android:layout_margin="2dip"
+    	android:layout_weight="0.75"   
+    	>        
+			<TextView android:text="Period (msec)"
+					  android:id="@+id/PeriodText"
+					  android:layout_height="fill_parent"
+					  android:layout_width="fill_parent"
+					  android:gravity="center|bottom"
+					  android:focusable="true"
+					   android:layout_weight="3"   
+					  >
+			</TextView>
+			
+			 <EditText android:id="@+id/PeriodValue"
+			 		   android:layout_height="fill_parent"
+			 		   android:layout_width="fill_parent"
+			 		   android:gravity="center"
+			 		   android:digits="0123456789"
+			 		   android:numeric="integer"
+			 		   android:text="250"
+			 		   android:maxLines="1"
+					   android:maxLength="3"
+					   android:layout_weight="1"   
+			 ></EditText>
+	 	</LinearLayout>
+	 
+
+
+		<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    	android:layout_width="fill_parent"
+   	 	android:layout_height="fill_parent"
+   	 	android:orientation="vertical"
+   	 	android:layout_margin="2dip"
+    	android:layout_weight="1"   
+    	>
+			<Button android:id="@+id/PeriodButton"
+		 			android:layout_height="fill_parent"
+		 			android:layout_width="fill_parent"
+					android:layout_margin="2dp"
+		 			android:gravity="center"
+		 			android:background="@drawable/button_pattern"
+		 			android:layout_weight="1"
+		 			android:text="Set Period"
+		 			/>    		 	
+		</LinearLayout>
+		
+		<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    	android:layout_width="fill_parent"
+   	 	android:layout_height="fill_parent"
+   	 	android:orientation="vertical"
+   	 	android:layout_margin="2dip"
+    	android:layout_weight="1"
+    	>
+			<Button android:id="@+id/resetButton"
+		 			android:layout_height="fill_parent"
+		 			android:layout_width="fill_parent"
+					android:layout_margin="2dp"
+		 			android:gravity="center"
+		 			android:background="@drawable/button_pattern_reset"
+		 			android:layout_weight="1"
+		 			android:text="Reset"
+		 			/>  			
+		</LinearLayout>
+	
+</LinearLayout>
+
+<!-- 0 -->
+    <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    android:orientation="vertical"
+    android:background="#505050"
+    android:layout_margin="3dip"
+    android:layout_weight="1"    
+    >
+
+    <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    android:layout_margin="3dip"
+    android:layout_weight="1"    
+    >
+    	        
+			<TextView android:text="Channel0"
+					  android:id="@+id/Channel0Text"
+					  android:layout_height="fill_parent"
+					  android:layout_width="fill_parent"
+					  android:gravity="center"
+					  android:layout_weight="3"
+					  >
+			</TextView>
+
+			<SeekBar
+			    android:id="@+id/Channel0Seekbar"
+			    android:layout_width="fill_parent"
+			    android:layout_height="fill_parent"
+			    android:layout_margin="2dip"
+			    android:layout_weight="1"
+			    android:gravity="center"
+			    android:max="95"
+			    android:progress="00" />
+
+	</LinearLayout>
+
+    <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    android:layout_margin="3dip"
+    android:layout_weight="1"    
+    >
+			<TextView android:text="Duty Cycle(%)"
+					  android:id="@+id/DutyCycle0Text"
+					  android:layout_height="fill_parent"
+					  android:layout_width="fill_parent"
+					  android:gravity="center"
+					  android:layout_weight="1"
+					  >
+			</TextView>
+			
+			<EditText android:text="0"
+					  android:id="@+id/DutyCycle0Value"
+					  android:digits="0123456789"
+					  android:layout_height="fill_parent"
+					  android:layout_width="fill_parent"
+					  android:gravity="center"
+					  android:maxLines="1"
+					  android:maxLength="3"					  
+					  android:focusableInTouchMode="false"
+					  android:layout_weight="1"
+				  />
+			
+			<TextView android:text=""
+					  android:layout_height="fill_parent"
+					  android:layout_width="fill_parent"
+					  android:gravity="center"
+					  android:layout_below="@id/Channel0Text"
+					  android:layout_weight="1"
+					  >
+			</TextView>					
+	</LinearLayout>	
+</LinearLayout>
+
+<!-- 1 -->
+    <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    android:orientation="vertical"
+    android:background="#505050"
+    android:layout_margin="3dip"
+    android:layout_weight="1"    
+    >
+
+    <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    android:layout_margin="3dip"
+    android:layout_weight="1"    
+    >
+			<TextView android:text="Channel1"
+					  android:id="@+id/Channel1Text"
+					  android:layout_height="fill_parent"
+					  android:layout_width="fill_parent"
+					  android:gravity="center"
+					  android:layout_weight="3"
+					  >
+			</TextView>
+			<SeekBar android:id= "@+id/Channel1Seekbar"
+					 android:max="95"
+					 android:layout_height="fill_parent"
+					 android:layout_width="fill_parent"
+					 android:progress="00"
+					 android:layout_margin="2dip"
+					 android:gravity="center"
+					 android:layout_weight="1"
+					 />
+	</LinearLayout>
+	
+    <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    android:layout_margin="3dip"
+    android:layout_weight="1"    
+    >			
+			<TextView android:text="Duty Cycle(%)"
+					  android:id="@+id/DutyCycle1Text"
+					  android:layout_height="fill_parent"
+					  android:layout_width="fill_parent"
+					  android:gravity="center"
+					  android:layout_below="@id/Channel1Text"
+					  android:layout_weight="1"
+					  >
+			</TextView>
+			    
+			<EditText android:text="0"
+					  android:id="@+id/DutyCycle1Value"
+					  android:digits="0123456789"
+					  android:layout_height="fill_parent"
+					  android:layout_width="fill_parent"
+					  android:gravity="center"
+					  android:maxLines="1"
+					  android:maxLength="3"
+					  android:focusableInTouchMode="false"
+					  android:layout_weight="1"
+					  />
+			<TextView android:text=""
+					  android:layout_height="fill_parent"
+					  android:layout_width="fill_parent"
+					  android:gravity="center"
+					  android:layout_below="@id/Channel0Text"
+					  android:layout_weight="1"
+					  >
+			</TextView>					
+    </LinearLayout>	
+</LinearLayout>
+
+<!-- 2 -->
+    <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    android:orientation="vertical"
+    android:background="#505050"
+    android:layout_margin="3dip"
+    android:layout_weight="1"    
+    >
+			
+    <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    android:layout_margin="3dip"
+    android:layout_weight="1"    
+    >
+			<TextView android:text="Channel2"
+					  android:id="@+id/Channel2Text"
+					  android:layout_height="fill_parent"
+					  android:layout_width="fill_parent"
+					  android:gravity="center"
+					  android:layout_weight="3"
+					  >
+			</TextView>
+
+			<SeekBar android:id= "@+id/Channel2Seekbar"
+					 android:max="95"
+					 android:layout_height="fill_parent"
+					 android:layout_width="fill_parent"
+					 android:progress="00"
+					 android:layout_margin="2dip"
+					 android:gravity="center"
+					 android:layout_weight="1"
+					 />		
+	</LinearLayout>
+		
+    <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    android:layout_margin="3dip"
+    android:layout_weight="1"    
+    >
+			<TextView android:text="Duty Cycle(%)"
+					  android:id="@+id/DutyCycle2Text"
+					  android:layout_height="fill_parent"
+					  android:layout_width="fill_parent"
+					  android:gravity="center"
+					  android:layout_below="@id/Channel2Text"
+					  android:layout_weight="1"
+					  >
+			</TextView>
+
+			<EditText
+			    android:id="@+id/DutyCycle2Value"
+			    android:layout_width="fill_parent"
+			    android:layout_height="fill_parent"
+			    android:layout_weight="1"
+			    android:cursorVisible="false"
+			    android:digits="0123456789"
+			    android:ems="10"
+			    android:gravity="center"
+			    android:focusableInTouchMode="false"
+			    android:maxLength="3"
+			    android:maxLines="1"
+			    android:text="0" >
+
+			    <requestFocus />
+			</EditText>
+
+			<TextView android:text=""
+					  android:layout_height="fill_parent"
+					  android:layout_width="fill_parent"
+					  android:gravity="center"
+					  android:layout_below="@id/Channel0Text"
+					  android:layout_weight="1"
+					  >
+			</TextView>					
+	</LinearLayout>
+				
+</LinearLayout>
+
+<!-- 3 -->
+    <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    android:orientation="vertical"
+    android:background="#505050"
+    android:layout_margin="3dip"
+    android:layout_weight="1"    
+    >
+
+    <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    android:layout_margin="3dip"
+    android:layout_weight="1"    
+    >	
+			<TextView android:text="Channel3"
+					  android:id="@+id/Channel3Text"
+					  android:layout_height="fill_parent"
+					  android:layout_width="fill_parent"
+					  android:gravity="center"
+					  android:layout_weight="3"
+					  >
+			</TextView>
+			
+			<SeekBar android:id= "@+id/Channel3Seekbar"
+					 android:max="95"
+					 android:layout_height="fill_parent"
+					 android:layout_width="fill_parent"
+					 android:progress="00"
+					 android:layout_toRightOf="@id/Channel3Text"
+					 android:layout_margin="2dip"
+					 android:gravity="center"
+					 android:layout_weight="1"
+					 />
+	</LinearLayout>	
+
+    <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    android:layout_margin="3dip"
+    android:layout_weight="1"    
+    >
+			<TextView android:text="Duty Cycle(%)"
+					  android:id="@+id/DutyCycle3Text"
+					  android:layout_height="fill_parent"
+					  android:layout_width="fill_parent"
+					  android:gravity="center"
+					  android:layout_below="@id/Channel3Text"
+					  android:layout_weight="1"
+					  >
+			</TextView>
+											
+			<EditText android:text="0"
+					  android:id="@+id/DutyCycle3Value"
+					  android:digits="0123456789"
+					  android:layout_height="fill_parent"
+					  android:layout_width="fill_parent"
+					  android:gravity="center"
+					  android:maxLines="1"
+					  android:maxLength="3"					  
+					  android:focusableInTouchMode="false"
+					  android:layout_weight="1"
+					  />
+			<TextView android:text=""
+					  android:layout_height="fill_parent"
+					  android:layout_width="fill_parent"
+					  android:gravity="center"
+					  android:layout_below="@id/Channel0Text"
+					  android:layout_weight="1"
+					  >
+			</TextView>					
+	</LinearLayout>	
+			
+	</LinearLayout>
+
+</LinearLayout>

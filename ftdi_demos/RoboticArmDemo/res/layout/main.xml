@@ -1,0 +1,240 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    >
+  
+    
+  <ImageView 
+    	android:layout_width="wrap_content" 
+    	android:id="@+id/imageView1" 
+    	android:src="@drawable/banner"
+    	android:layout_height="wrap_content">
+    </ImageView>
+   		
+		 
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="horizontal"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    >
+<Button android:id="@+id/button1" 
+		android:layout_width="wrap_content" 
+		android:text="Base" 
+		android:layout_height="wrap_content">
+		
+		</Button>
+<Button android:text="ARM" 
+		android:id="@+id/button2" 
+		android:layout_width="fill_parent"  
+		android:layout_height="wrap_content">
+		</Button>
+			
+<Button android:text="Wrist" 
+		android:id="@+id/button3" 
+		android:layout_width="fill_parent"  
+		android:layout_height="wrap_content">
+		</Button>
+			
+<Button android:text="Grip" 
+		android:id="@+id/button4" 
+		android:layout_width="fill_parent"  
+		android:layout_height="wrap_content">
+		</Button>	
+		
+	
+		
+		
+</LinearLayout>
+
+
+
+<LinearLayout android:orientation="vertical" 
+			android:layout_width="wrap_content" 
+			android:layout_marginLeft="15dip" 
+			android:layout_height="wrap_content">
+
+<RelativeLayout  xmlns:android="http://schemas.android.com/apk/res/android"
+        android:layout_width="fill_parent"
+    	android:layout_height="fill_parent" >
+    				
+    <TextView android:id="@+id/textview2" 
+    		  android:text="Wrist" 
+    		  android:textStyle="bold"
+    		  android:textSize="40dip"
+    		  android:layout_width="wrap_content" 
+    		  android:layout_height="wrap_content">
+  </TextView>
+  
+    <SeekBar android:id="@+id/wristseekbar1" 
+    		android:layout_width="400dip" 
+    		android:layout_height="30dip"
+    		android:max="32" 
+    		android:progress="16"
+    		android:layout_below="@id/textview2">
+       		</SeekBar>
+
+
+	<TextView android:id="@+id/textview3" 
+    		  android:text="Grip" 
+    		  android:textStyle="bold"
+    		  android:textSize="40dip"
+    		  android:layout_width="wrap_content" 
+    		  android:layout_height="wrap_content"
+    		  android:layout_alignParentRight="true"
+    		  android:layout_marginRight="20dip"
+    		  >
+  </TextView>
+  
+    <SeekBar android:id="@+id/gripseekbar2" 
+    		android:layout_width="400dip" 
+    		android:layout_height="wrap_content"
+    		android:max="16" 
+    		android:progress="0"
+    		android:layout_below="@id/textview3"
+    		android:layout_alignParentRight="true"
+    		android:layout_marginRight="20dip"
+    		>
+   	</SeekBar>
+    		    		
+		
+	<Button 
+		android:id="@+id/StartButton"
+		android:layout_width="100dip"  
+		android:layout_height="100dip"
+		android:layout_below="@id/gripseekbar2"
+		android:layout_marginTop="100dip"
+		android:layout_marginLeft="100dip"
+		android:background="@drawable/home1"
+		>
+		</Button>	
+		
+	<TextView android:id="@+id/textStart" 
+    		  android:text="Home" 
+    		  android:layout_width="wrap_content" 
+    		  android:layout_height="wrap_content"
+    		  android:layout_alignParentLeft="true"
+    		  android:layout_below="@id/StartButton"
+    		  android:layout_marginLeft="130dip"
+    		  >
+  </TextView>	
+
+
+	<Button  
+		android:id="@+id/StopButton" 
+		android:layout_width="100dip"  
+		android:layout_height="100dip"
+		android:layout_below="@id/gripseekbar2"
+		android:layout_marginTop="100dip"
+		android:layout_marginLeft="100dip"
+		android:layout_toRightOf="@id/StartButton"
+		android:background="@drawable/user">
+		</Button>	
+		
+		<TextView android:id="@+id/textUser" 
+    		  android:text="User" 
+    		  android:layout_width="wrap_content" 
+    		  android:layout_height="wrap_content"
+    		  android:layout_toRightOf="@id/textStart"
+    		  android:layout_below = "@id/StopButton"
+    		  android:layout_marginLeft="170dip"
+    		 >
+  		</TextView>	
+  <!--  		
+  		<Button  
+		android:id="@+id/helpButton" 
+		android:layout_width="100dip"  
+		android:layout_height="100dip"
+		android:layout_below="@id/textUser"
+		android:layout_marginTop="50dip"
+		android:layout_marginLeft="150dip"
+		android:layout_toRightOf="@id/StartButton"
+		android:background="@drawable/help">
+		</Button>	
+		
+		<TextView android:id="@+id/textStatus" 
+    		  android:text="Status" 
+    		  android:layout_width="wrap_content" 
+    		  android:layout_height="wrap_content"
+    		  android:layout_below = "@id/helpButton"
+    		  android:layout_toRightOf="@id/StartButton"
+    		  android:layout_marginLeft="170dip"
+    		 >
+  		</TextView>	
+  		
+  -->		
+  		
+		
+   
+   <Button 
+   		android:id="@+id/DemoButton"
+   		android:focusableInTouchMode="true"
+		android:layout_width="100dip"  
+		android:layout_height="100dip"
+		android:layout_below="@id/gripseekbar2"
+		android:layout_marginLeft="100dip"
+		android:layout_marginTop="100dip"
+		android:layout_marginRight="100dip"
+		android:layout_toRightOf="@id/StopButton"
+		android:background="@drawable/start">
+		</Button>	
+		
+	<TextView android:id="@+id/textAuto" 
+    		  android:text="Auto" 
+    		  android:layout_width="wrap_content" 
+    		  android:layout_height="wrap_content"
+    		  android:layout_toRightOf="@id/textUser"
+    		  android:layout_marginLeft="160dip"
+    		  android:layout_below="@id/DemoButton"
+    		  >
+  		</TextView>		
+		
+		<TextView android:id="@+id/demoStatus" 
+    		  android:text="Demo Status" 
+    		  android:textStyle="bold"
+    		  android:textSize="20dip"
+    		  android:layout_width="wrap_content" 
+    		  android:layout_height="wrap_content"
+    		  android:layout_alignParentLeft="true"
+    		  android:layout_marginLeft="200dip"
+    		  android:layout_marginTop="200dip"
+    		  android:layout_below="@id/StartButton"
+    		  >
+  		</TextView>
+  		
+  		<EditText android:id="@+id/edittext"
+  				  android:textStyle="bold"	
+				  android:textSize="20dip"
+  				  android:text="Android Device can be used as input device"
+  				  android:layout_below="@id/demoStatus"
+  				  android:layout_width="400dip" 
+    		  	  android:layout_height="100dip"
+    		  	  android:editable="false"
+    		  	  android:layout_marginLeft="200dip"
+    		  	  >
+  		</EditText>
+  		
+  		
+  		
+  		<ImageView android:src="@drawable/robo_arm"
+  					android:layout_width="800dip"
+  					android:layout_height = "800dip"
+  					android:layout_toRightOf="@id/DemoButton"
+  					android:layout_below = "@id/gripseekbar2"
+  					android:layout_marginTop="100dip"
+  					>
+  		</ImageView>
+  
+  
+  		    		
+    		    		
+</RelativeLayout>	
+    		
+</LinearLayout>
+
+
+
+
+
+</LinearLayout>

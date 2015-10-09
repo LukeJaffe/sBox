@@ -1,0 +1,1 @@
+Constains samples of console app
