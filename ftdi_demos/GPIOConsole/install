@@ -1,0 +1,3 @@
+#!/bin/bash
+ant clean debug
+adb push bin/TestAndroidProj-debug.apk /sdcard/gpio.apk
