@@ -1,0 +1,961 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+	android:orientation="vertical" android:layout_height="fill_parent"
+	android:layout_width="fill_parent">
+
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+	android:orientation="horizontal" android:layout_height="fill_parent"
+	android:layout_width="fill_parent"
+	android:baselineAligned="false">
+
+  <!--  
+	<ImageView android:layout_width="wrap_content"
+		android:layout_height="wrap_content" android:src="@drawable/banner"
+		android:layout_marginLeft="10dip">
+	</ImageView>
+  -->	
+  <!-- Area 1 -->
+	<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+			android:orientation="vertical" android:layout_width="fill_parent"
+			android:layout_height="fill_parent"
+			android:layout_weight="2"
+			>
+	
+		<TextView android:id="@+id/gpiomap"
+				  android:layout_height="fill_parent"
+				  android:layout_width="fill_parent"
+				  android:text="Out Map"
+				  android:gravity="center"
+				  android:layout_marginTop="2dp"
+				  android:layout_marginBottom="2dp"
+				  android:background="#508050"
+				  android:layout_weight="1">
+	    </TextView>
+	    
+	    <TextView android:id="@+id/gpiomap"
+				  android:layout_height="fill_parent"
+				  android:layout_width="fill_parent"
+				  android:text="In Map"
+				  android:gravity="center"
+				  android:layout_marginTop="2dp"
+				  android:layout_marginBottom="2dp"
+				  android:background="#508050"
+				  android:layout_weight="1">
+	    </TextView>
+	    
+	    
+	    <TextView android:id="@+id/outdata"
+				  android:layout_height="fill_parent"
+				  android:layout_width="fill_parent"
+				  android:text="Out Data"
+				  android:gravity="center"
+				  android:layout_marginTop="2dp"
+				  android:layout_marginBottom="2dp"
+				  android:background="#508050"
+				  android:layout_weight="1">
+	    </TextView>
+	    
+	    <TextView android:id="@+id/indata"
+				  android:layout_height="fill_parent"
+				  android:layout_width="fill_parent"
+				  android:text="In Data"
+				  android:gravity="center"
+				  android:layout_marginTop="2dp"
+				  android:layout_marginBottom="2dp"
+				  android:background="#508050"
+				  android:layout_weight="1">
+	    </TextView>
+	    
+	    </LinearLayout>
+
+<!-- Area 2 -->			
+	<!-- android:layout_marginTop="10dip"  -->
+	<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+			android:orientation="vertical" android:layout_width="fill_parent"
+			android:layout_height="fill_parent"
+			android:layout_weight="1"
+			android:background="#101010"
+			>
+<!-- OUT MAP -->	
+	<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android" 
+				   android:layout_height="fill_parent"
+					android:layout_width="fill_parent"
+					android:layout_weight="1"
+				  android:layout_marginTop="2dip"
+				  android:layout_marginBottom="2dip"
+					android:background="#202020">
+
+	    	<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+				android:orientation="vertical" 
+				android:layout_width="fill_parent"
+				android:layout_height="fill_parent"
+				android:layout_weight="1">
+							
+				<CheckBox android:layout_width="fill_parent"
+					android:layout_height="wrap_content" android:id="@+id/checkbox1"
+					android:checked="false"
+					android:layout_weight="1"
+				></CheckBox>
+
+				<TextView android:layout_width="fill_parent"
+					android:layout_height="wrap_content" android:id="@+id/gpio0"
+					android:text=" IO0" 
+					android:layout_weight="1"
+				></TextView>
+			</LinearLayout>
+
+	    	<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+				android:orientation="vertical" 
+				android:layout_width="fill_parent"
+				android:layout_height="fill_parent"
+				android:layout_weight="1">
+				
+				<CheckBox android:layout_width="fill_parent"
+					android:layout_height="wrap_content" android:id="@+id/checkbox2"
+					android:checked="false"
+					android:layout_weight="1"
+					></CheckBox>
+		
+				<TextView android:layout_width="fill_parent"
+					android:layout_height="wrap_content" android:id="@+id/gpio1"
+					android:text="IO1" 
+					android:layout_weight="1"			
+					></TextView>
+			</LinearLayout>
+
+	    	<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+				android:orientation="vertical" 
+				android:layout_width="fill_parent"
+				android:layout_height="fill_parent"
+				android:layout_weight="1">
+				
+				<CheckBox android:id="@+id/checkbox3"
+				    android:layout_width="fill_parent"
+					android:layout_height="wrap_content"					
+					android:checked="false"
+					android:layout_weight="1"
+					></CheckBox>
+		
+				<TextView android:id="@+id/gpio2"
+				    android:layout_width="fill_parent"
+					android:layout_height="wrap_content"
+					android:text="IO2"
+					android:layout_weight="1"
+					></TextView>
+			</LinearLayout>
+
+	    	<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+				android:orientation="vertical" 
+				android:layout_width="fill_parent"
+				android:layout_height="fill_parent"
+				android:layout_weight="1">
+				
+				<CheckBox android:id="@+id/checkbox4"
+				    android:layout_width="fill_parent"
+					android:layout_height="wrap_content" 
+					android:checked="false"
+					android:layout_weight="1"
+					></CheckBox>
+				<TextView android:id="@+id/gpio3"
+				    android:layout_width="fill_parent"
+					android:layout_height="wrap_content"
+					android:text="IO3" 
+					android:layout_weight="1"
+					></TextView>
+			</LinearLayout>
+
+	    	<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+				android:orientation="vertical" 
+				android:layout_width="fill_parent"
+				android:layout_height="fill_parent"
+				android:layout_weight="1">
+				
+				<CheckBox  android:id="@+id/checkbox5"
+				    android:layout_width="fill_parent"
+					android:layout_height="wrap_content" 
+					android:checked="false"
+					android:layout_weight="1"			
+					></CheckBox>
+				<TextView  android:id="@+id/gpio4"
+				    android:layout_width="fill_parent"
+					android:layout_height="wrap_content"
+					android:text="IO4" 
+					android:layout_weight="1"
+					></TextView>
+			</LinearLayout>
+
+	    	<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+				android:orientation="vertical" 
+				android:layout_width="fill_parent"
+				android:layout_height="fill_parent"
+				android:layout_weight="1">
+				
+				<CheckBox android:id="@+id/checkbox6" 
+				    android:layout_width="fill_parent"
+					android:layout_height="wrap_content" 
+					android:checked="false"
+					android:layout_weight="1"
+					></CheckBox>
+				<TextView android:id="@+id/gpio5"
+				    android:layout_width="fill_parent"
+					android:layout_height="wrap_content" 
+					android:text="IO5"
+					android:layout_weight="1"
+					></TextView>
+			</LinearLayout>
+
+	    	<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+				android:orientation="vertical" 
+				android:layout_width="fill_parent"
+				android:layout_height="fill_parent"
+				android:layout_weight="1">
+				
+				<CheckBox  android:id="@+id/checkbox7"
+				    android:layout_width="fill_parent"
+					android:layout_height="wrap_content"
+					android:checked="false"
+					android:layout_weight="1"
+					></CheckBox>
+				<TextView  android:id="@+id/gpio6"
+				    android:layout_width="fill_parent"
+					android:layout_height="wrap_content"
+					android:text="IO6" 
+					android:layout_weight="1"
+					></TextView>
+			</LinearLayout>
+
+<!--
+		<CheckBox android:layout_width="wrap_content"
+			android:layout_height="wrap_content" android:id="@+id/checkbox8"
+			android:layout_toRightOf="@id/checkbox7" android:layout_marginLeft="45dip"
+			android:checked="false"></CheckBox>
+		<TextView android:layout_width="wrap_content"
+			android:layout_height="wrap_content" android:id="@+id/gpio7"
+			android:text="gpio7" android:layout_toRightOf="@id/gpio6"
+			android:layout_below="@id/checkbox8" android:layout_marginLeft="45dip"></TextView>
+-->			
+	</LinearLayout>
+	
+<!-- IN MAP -->
+	<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"  
+			android:layout_height="fill_parent"
+			android:layout_width="fill_parent"
+				  android:layout_marginTop="2dip"
+				  android:layout_marginBottom="2dip"
+			android:background="#202020"
+			android:layout_weight="1"
+	    >
+	    	
+	    	<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+				android:orientation="vertical" 
+				android:layout_width="fill_parent"
+				android:layout_height="fill_parent"
+				android:layout_weight="1">
+						
+				<CheckBox  android:id="@+id/checkboxin1"
+				    android:layout_width="wrap_content"
+					android:layout_height="wrap_content"
+					android:checked="false"
+					android:layout_weight="1"
+					></CheckBox>
+		
+				<TextView  android:id="@+id/gpioin0"
+				    android:layout_width="wrap_content"
+					android:layout_height="wrap_content"
+					android:text="IO0"
+					android:layout_weight="1"
+					></TextView>
+			</LinearLayout>
+		
+	    	<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+				android:orientation="vertical" 
+				android:layout_width="fill_parent"
+				android:layout_height="fill_parent"
+				android:layout_weight="1">
+	    	
+				<CheckBox  android:id="@+id/checkboxin2"
+				    android:layout_width="wrap_content"
+					android:layout_height="wrap_content"					
+					android:checked="false"
+					android:layout_weight="1"			
+					></CheckBox>
+		
+				<TextView  android:id="@+id/gpioin1"
+				    android:layout_width="wrap_content"
+					android:layout_height="wrap_content"
+					android:text="IO1"
+					android:layout_weight="1"
+					></TextView>
+			</LinearLayout>
+		
+	    	<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+				android:orientation="vertical" 
+				android:layout_width="fill_parent"
+				android:layout_height="fill_parent"
+				android:layout_weight="1">
+				<CheckBox android:layout_width="wrap_content"
+					android:layout_height="wrap_content" android:id="@+id/checkboxin3"
+					android:checked="false"
+					android:layout_weight="1"
+					></CheckBox>
+		
+				<TextView android:layout_width="wrap_content"
+					android:layout_height="wrap_content" android:id="@+id/gpioin2"
+					android:text="IO2"
+					android:layout_weight="1"			
+					></TextView>
+			</LinearLayout>
+		
+	    	<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+				android:orientation="vertical" 
+				android:layout_width="fill_parent"
+				android:layout_height="fill_parent"
+				android:layout_weight="1">
+				
+				<CheckBox android:layout_width="wrap_content"
+					android:layout_height="wrap_content" android:id="@+id/checkboxin4"
+					android:checked="false"
+					android:layout_weight="1"
+					></CheckBox>
+				
+				<TextView android:layout_width="wrap_content"
+					android:layout_height="wrap_content" android:id="@+id/gpioin3"
+					android:text="IO3"
+					android:layout_weight="1"
+					></TextView>
+			</LinearLayout>
+		
+	    	<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+				android:orientation="vertical" 
+				android:layout_width="fill_parent"
+				android:layout_height="fill_parent"
+				android:layout_weight="1">
+				
+				<CheckBox android:layout_width="wrap_content"
+					android:layout_height="wrap_content" android:id="@+id/checkboxin5"
+					android:checked="false"
+					android:layout_weight="1"
+					></CheckBox>
+				
+				<TextView android:layout_width="wrap_content"
+					android:layout_height="wrap_content" android:id="@+id/gpioin4"
+					android:text="IO4" 
+					android:layout_weight="1"
+					></TextView>
+			</LinearLayout>
+		
+	    	<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+				android:orientation="vertical" 
+				android:layout_width="fill_parent"
+				android:layout_height="fill_parent"
+				android:layout_weight="1">
+				
+				<CheckBox android:layout_width="wrap_content"
+					android:layout_height="wrap_content" android:id="@+id/checkboxin6"
+					android:checked="false"
+					android:layout_weight="1"
+					></CheckBox>
+				
+				<TextView android:layout_width="wrap_content"
+					android:layout_height="wrap_content" android:id="@+id/gpioin5"
+					android:text="IO5"
+					android:layout_weight="1"
+					></TextView>
+			</LinearLayout>
+		
+	    	<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+				android:orientation="vertical" 
+				android:layout_width="fill_parent"
+				android:layout_height="fill_parent"
+				android:layout_weight="1">
+				
+				<CheckBox android:layout_width="wrap_content"
+					android:layout_height="wrap_content" android:id="@+id/checkboxin7"
+					android:checked="false"
+					android:layout_weight="1"
+					></CheckBox>
+				
+				<TextView android:layout_width="wrap_content"
+					android:layout_height="wrap_content" android:id="@+id/gpioin6"
+					android:text="IO6"
+					android:layout_weight="1"
+					></TextView>
+			</LinearLayout>
+
+<!--
+		<CheckBox android:layout_width="wrap_content"
+			android:layout_height="wrap_content" android:id="@+id/checkboxin8"
+			android:layout_toRightOf="@id/checkboxin7" android:layout_marginLeft="45dip"
+			android:checked="false"></CheckBox>
+		<TextView android:layout_width="wrap_content"
+			android:layout_height="wrap_content" android:id="@+id/gpioin7"
+			android:text="gpio7" android:layout_toRightOf="@id/gpioin6"
+			android:layout_below="@id/checkboxin8" android:layout_marginLeft="45dip"></TextView>
+-->
+
+	</LinearLayout>
+	
+<!-- Out Data  -->
+	<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"  
+			android:layout_height="fill_parent"
+			android:layout_width="fill_parent"
+				  android:layout_marginTop="2dip"
+				  android:layout_marginBottom="2dip"
+			android:background="#202020"
+			android:layout_weight="1"
+			>
+
+	    	<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+				android:orientation="vertical" 
+				android:layout_width="fill_parent"
+				android:layout_height="fill_parent"
+				android:layout_weight="1">
+				
+				<ToggleButton android:layout_width="fill_parent"
+					android:layout_height="0dp" android:id="@+id/togglebutton1"
+					android:textOn="1" android:textOff="0"
+					android:textColor="#904040"
+					android:textStyle="bold"
+					android:textSize="40dip"
+					android:background="@drawable/blue"
+					android:layout_weight="3"
+					></ToggleButton>
+		
+				<TextView android:layout_width="fill_parent"
+					android:layout_height="0dp" android:id="@+id/gpiodata0"
+					android:text="IO0"
+					android:layout_weight="1"
+					></TextView>
+			</LinearLayout>
+		
+	    	<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+				android:orientation="vertical" 
+				android:layout_width="fill_parent"
+				android:layout_height="fill_parent"
+				android:layout_weight="1">
+				
+				<ToggleButton android:layout_width="fill_parent"
+					android:layout_height="0dp" android:id="@+id/togglebutton2"
+					android:textOn="1" android:textOff="0"
+					android:textColor="#904040"
+					android:textStyle="bold"
+					android:textSize="40dip"
+					android:background="@drawable/blue"
+					android:layout_weight="3"
+					></ToggleButton>
+		
+				<TextView android:layout_width="fill_parent"
+					android:layout_height="0dp" android:id="@+id/gpiodata1"
+					android:text="IO1" 
+					android:layout_weight="1"
+					></TextView>
+			</LinearLayout>
+		
+	    	<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+				android:orientation="vertical" 
+				android:layout_width="fill_parent"
+				android:layout_height="fill_parent"
+				android:layout_weight="1">
+				
+				<ToggleButton android:layout_width="fill_parent"
+					android:layout_height="0dp" android:id="@+id/togglebutton3"
+					android:textOn="1" android:textOff="0"
+					android:textColor="#904040"
+					android:textStyle="bold"
+					android:textSize="40dip"
+					android:background="@drawable/blue"
+					android:layout_weight="3"
+					></ToggleButton>
+		
+				<TextView android:layout_width="fill_parent"
+					android:layout_height="0dp" android:id="@+id/gpiodata2"
+					android:text="IO2" 
+					android:layout_weight="1"
+					></TextView>
+			</LinearLayout>
+		
+	    	<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+				android:orientation="vertical" 
+				android:layout_width="fill_parent"
+				android:layout_height="fill_parent"
+				android:layout_weight="1">
+				
+				<ToggleButton android:layout_width="fill_parent"
+					android:layout_height="0dp" android:id="@+id/togglebutton4"
+					android:textOn="1" android:textOff="0"
+					android:textColor="#904040"
+					android:textStyle="bold"
+					android:textSize="40dip"
+					android:background="@drawable/blue"
+					android:layout_weight="3"
+					></ToggleButton>
+		
+				<TextView android:layout_width="fill_parent"
+					android:layout_height="0dp" android:id="@+id/gpiodata3"
+					android:text="IO3" 
+					android:layout_weight="1"
+					></TextView>
+			</LinearLayout>
+		
+	    	<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+				android:orientation="vertical" 
+				android:layout_width="fill_parent"
+				android:layout_height="fill_parent"
+				android:layout_weight="1">
+				
+				<ToggleButton android:layout_width="fill_parent"
+					android:layout_height="0dp" android:id="@+id/togglebutton5"
+					android:textOn="1" android:textOff="0"
+					android:textColor="#904040"
+					android:textStyle="bold"
+					android:textSize="40dip"
+					android:background="@drawable/blue"
+					android:layout_weight="3"
+					></ToggleButton>
+		
+				<TextView android:layout_width="fill_parent"
+					android:layout_height="0dp" android:id="@+id/gpiodata4"
+					android:text="IO4" 
+					android:layout_weight="1"
+					></TextView>
+			</LinearLayout>
+		
+	    	<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+				android:orientation="vertical" 
+				android:layout_width="fill_parent"
+				android:layout_height="fill_parent"
+				android:layout_weight="1">
+				
+				<ToggleButton android:layout_width="fill_parent"
+					android:layout_height="0dp" android:id="@+id/togglebutton6"
+					android:textOn="1" android:textOff="0"
+					android:textColor="#904040"
+					android:textStyle="bold"
+					android:textSize="40dip"
+					android:background="@drawable/blue"
+					android:layout_weight="3"
+					></ToggleButton>
+		
+				<TextView android:layout_width="fill_parent"
+					android:layout_height="0dp" android:id="@+id/gpiodata5"
+					android:text="IO5" 
+					android:layout_weight="1"
+					></TextView>
+			</LinearLayout>
+		
+	    	<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+				android:orientation="vertical" 
+				android:layout_width="fill_parent"
+				android:layout_height="fill_parent"
+				android:layout_weight="1">
+				
+				<ToggleButton android:layout_width="fill_parent"
+					android:layout_height="0dp" android:id="@+id/togglebutton7"
+					android:textOn="1" android:textOff="0"
+					android:textColor="#904040"
+					android:textStyle="bold"
+					android:textSize="40dip"
+					android:background="@drawable/blue"
+					android:layout_weight="3"
+					></ToggleButton>
+		
+				<TextView android:layout_width="fill_parent"
+					android:layout_height="0dp" android:id="@+id/gpiodata6"
+					android:text="IO6"
+					android:layout_weight="1"
+					></TextView>
+			</LinearLayout>
+
+<!--
+		<ToggleButton android:layout_width="wrap_content"
+			android:layout_height="wrap_content" android:id="@+id/togglebutton8"
+			android:layout_toRightOf="@id/togglebutton7" android:layout_marginLeft="20dip"
+			android:textOn="1" android:textOff="0"
+			android:textColor="#904040"
+			android:textStyle="bold"
+			android:textSize="40dip"
+			android:background="@drawable/blue"
+			></ToggleButton>
+
+		<TextView android:layout_width="wrap_content"
+			android:layout_height="wrap_content" android:id="@+id/gpiodata7"
+			android:text="gpio7" android:layout_toRightOf="@id/gpiodata6"
+			android:layout_below="@id/togglebutton8" android:layout_marginLeft="50dip"></TextView>
+-->			
+
+
+	</LinearLayout>
+	
+<!-- IN data -->
+	<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"  
+			android:layout_height="fill_parent"
+			android:layout_width="fill_parent"
+				  android:layout_marginTop="2dip"
+				  android:layout_marginBottom="2dip"
+			android:background="#202020"
+			android:layout_weight="1"
+			>
+
+	    	<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+				android:orientation="vertical" 
+				android:layout_width="fill_parent"
+				android:layout_height="fill_parent"
+				android:layout_weight="1">
+				
+				<ImageView android:src="@drawable/image1"
+					android:id="@+id/intogglebutton1"
+					android:layout_height="fill_parent"
+					android:layout_width="fill_parent"
+			        android:layout_weight="1"
+			        android:scaleType="centerInside"				
+					>
+					</ImageView>	
+			
+
+				<TextView android:layout_width="fill_parent"
+					android:layout_height="fill_parent" android:id="@+id/ingpiodata0"
+					android:text="IO0"
+					android:layout_weight="3"
+					></TextView>
+			</LinearLayout>
+		
+	    	<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+				android:orientation="vertical" 
+				android:layout_width="fill_parent"
+				android:layout_height="fill_parent"
+				android:layout_weight="1">
+				
+				<ImageView android:src="@drawable/image1"
+							android:id="@+id/intogglebutton2"
+							android:layout_height="fill_parent"
+							android:layout_width="fill_parent"
+					        android:layout_weight="1"
+					        android:scaleType="centerInside"
+							>
+							</ImageView>	
+				
+				<TextView android:layout_width="fill_parent"
+					android:layout_height="fill_parent" android:id="@+id/ingpiodata1"
+					android:text="IO1"
+					android:layout_weight="3"
+					></TextView>
+			</LinearLayout>
+		
+	    	<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+				android:orientation="vertical" 
+				android:layout_width="fill_parent"
+				android:layout_height="fill_parent"
+				android:layout_weight="1">
+				
+				<ImageView android:src="@drawable/image1"
+							android:id="@+id/intogglebutton3"
+							android:layout_height="fill_parent"
+							android:layout_width="fill_parent"
+							android:layout_weight="1"
+							android:scaleType="centerInside"
+							>
+							</ImageView>	
+		
+					
+				<TextView android:layout_width="fill_parent"
+					android:layout_height="fill_parent" android:id="@+id/ingpiodata2"
+					android:text="IO2"
+					android:layout_weight="3"
+					></TextView>
+			</LinearLayout>
+		
+	    	<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+				android:orientation="vertical" 
+				android:layout_width="fill_parent"
+				android:layout_height="fill_parent"
+				android:layout_weight="1">
+				
+				<ImageView android:src="@drawable/image1"
+							android:id="@+id/intogglebutton4"
+							android:layout_height="fill_parent"
+							android:layout_width="fill_parent"
+							android:layout_weight="1"
+							android:scaleType="centerInside"
+							>
+							</ImageView>	
+		
+				<TextView android:layout_width="fill_parent"
+					android:layout_height="fill_parent" android:id="@+id/ingpiodata3"
+					android:text="IO3"
+					android:layout_weight="3"
+					></TextView>
+			</LinearLayout>
+		
+	    	<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+				android:orientation="vertical" 
+				android:layout_width="fill_parent"
+				android:layout_height="fill_parent"
+				android:layout_weight="1">
+				
+				<ImageView android:src="@drawable/image1"
+							android:id="@+id/intogglebutton5"
+							android:layout_height="fill_parent"
+							android:layout_width="fill_parent"
+							android:layout_weight="1"
+							android:scaleType="centerInside"
+							>
+							</ImageView>	
+				
+				<TextView android:layout_width="fill_parent"
+					android:layout_height="fill_parent" android:id="@+id/ingpiodata4"
+					android:text="IO4"
+					android:layout_weight="3"
+					></TextView>
+			</LinearLayout>
+		
+	    	<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+				android:orientation="vertical" 
+				android:layout_width="fill_parent"
+				android:layout_height="fill_parent"
+				android:layout_weight="1">
+				
+				<ImageView android:src="@drawable/image1"
+							android:id="@+id/intogglebutton6"
+							android:layout_height="fill_parent"
+							android:layout_width="fill_parent"
+							android:layout_weight="1"
+							android:scaleType="centerInside"
+							>
+							</ImageView>	
+				
+				<TextView android:layout_width="fill_parent"
+					android:layout_height="fill_parent" android:id="@+id/ingpiodata5"
+					android:text="IO5"
+					android:layout_weight="3"
+					></TextView>
+			</LinearLayout>
+		
+	    	<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+				android:orientation="vertical" 
+				android:layout_width="fill_parent"
+				android:layout_height="fill_parent"
+				android:layout_weight="1">
+				
+				<ImageView android:src="@drawable/image1"
+							android:id="@+id/intogglebutton7"
+							android:layout_height="fill_parent"
+							android:layout_width="fill_parent"
+							android:layout_weight="1"
+							android:scaleType="centerInside"
+							>
+							</ImageView>	
+				
+				<TextView android:layout_width="fill_parent"
+					android:layout_height="fill_parent" android:id="@+id/ingpiodata6"
+					android:text="IO6"
+					android:layout_weight="3"
+					></TextView>
+			</LinearLayout>
+
+<!--		
+		<ImageView android:src="@drawable/image1"
+					android:id="@+id/intogglebutton8"
+					android:layout_height="wrap_content"
+					android:layout_width="wrap_content"
+					android:layout_toRightOf="@id/intogglebutton7"
+					android:layout_marginLeft="20dip">
+					</ImageView>	
+-->					
+		<!--
+		<ToggleButton android:layout_width="wrap_content"
+			android:layout_height="wrap_content" android:id="@+id/intogglebutton8"
+			android:layout_toRightOf="@id/intogglebutton7" android:layout_marginLeft="20dip"
+			android:textOn="1" android:textOff="0"></ToggleButton>
+		-->	
+<!--		
+		<TextView android:layout_width="wrap_content"
+			android:layout_height="wrap_content" android:id="@+id/ingpiodata7"
+			android:text="gpio7" android:layout_toRightOf="@id/ingpiodata6"
+			android:layout_below="@id/intogglebutton8" android:layout_marginLeft="50dip"></TextView>
+-->			
+
+
+	</LinearLayout>
+	
+	</LinearLayout>
+	
+<!-- Area 3a -->	
+	<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+			android:orientation="vertical" 
+			android:layout_width="fill_parent"
+			android:layout_height="fill_parent"
+			android:layout_margin="2dp"
+			android:layout_weight="2"
+			>
+			
+<!-- Config - Button -->			
+			<LinearLayout
+			    xmlns:android="http://schemas.android.com/apk/res/android"
+			    android:layout_width="fill_parent"
+			    android:layout_height="fill_parent"
+			    android:layout_marginTop="2dip"
+			    android:layout_marginBottom="2dip"
+			    android:layout_weight="1"
+			    android:background="#202020"
+			    android:orientation="vertical"
+
+			    >
+			<Button android:id="@+id/configbutton"
+		 			android:layout_height="fill_parent"
+		 			android:layout_width="fill_parent"
+		 			android:gravity="center"
+		 			android:layout_margin="1dp"
+		 			android:background="@drawable/button_pattern"
+		 			android:layout_weight="1"
+					android:focusable="true"
+					android:state_enabled="true"		 			
+		 			android:text="Config"
+		 			/>			
+			</LinearLayout>
+		 	
+<!-- Out - Button -->
+				
+			<LinearLayout
+			    xmlns:android="http://schemas.android.com/apk/res/android"
+			    android:layout_width="fill_parent"
+			    android:layout_height="fill_parent"
+			    android:layout_marginTop="2dip"
+			    android:layout_marginBottom="2dip"
+			    android:layout_weight="1.5"
+			    android:orientation="vertical"
+			android:background="#202020">	
+
+			<Button android:id="@+id/writebutton"
+		 			android:layout_height="fill_parent"
+		 			android:layout_width="fill_parent"
+		 			android:gravity="center"
+		 			android:layout_margin="1dp"
+		 			android:background="@drawable/button_pattern"
+		 			android:layout_weight="1"
+		 			android:text="Write"
+		 			/>
+			</LinearLayout>	
+			
+<!-- In - Button -->			
+			<LinearLayout
+			    xmlns:android="http://schemas.android.com/apk/res/android"
+			    android:layout_width="fill_parent"
+			    android:layout_height="fill_parent"
+			    android:layout_marginTop="2dip"
+			    android:layout_marginBottom="2dip"	    
+			    android:layout_weight="1.5"
+			    android:orientation="vertical"
+			android:background="#202020">
+
+			<Button android:id="@+id/readbutton"
+		 			android:layout_height="fill_parent"
+		 			android:layout_width="fill_parent"
+		 			android:gravity="center"
+		 			android:layout_margin="1dp"
+		 			android:background="@drawable/button_pattern"
+		 			android:layout_weight="1"
+		 			android:text="Read"
+		 			/>
+			</LinearLayout>		
+			
+	</LinearLayout>		
+<!-- Area 3a -->	
+	<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+			android:orientation="vertical" 
+			android:layout_width="fill_parent"
+			android:layout_height="fill_parent"
+			android:layout_marginTop="0dp"
+			android:layout_marginLeft="0dp"
+			android:layout_weight="2"
+			>
+
+			<EditText
+			    android:id="@+id/outmapdata"
+			    android:layout_width="fill_parent"
+			    android:layout_height="fill_parent"
+			    android:layout_weight="1"			    
+			    android:focusable="false"
+			    android:gravity="center"
+			    android:text="0x0"
+			    android:textStyle="bold" >
+</EditText>
+	 
+	 		<EditText android:id="@+id/inmapdata"
+					android:layout_height="fill_parent"
+					android:layout_width="fill_parent"
+					android:textStyle="bold"
+					android:text="0x0"
+					android:focusable="false"
+					android:gravity="center"
+					android:layout_weight="1"
+				></EditText>
+
+			<EditText android:id="@+id/writedata"
+					android:layout_height="fill_parent"
+					android:layout_width="fill_parent"
+					android:textStyle="bold"
+					android:text="0x0"
+					android:focusable="false"
+					android:gravity="center"
+					android:layout_weight="1"
+				></EditText>
+			
+			<EditText android:id="@+id/readdata"
+					android:layout_height="fill_parent"
+					android:layout_width="fill_parent"
+					android:textStyle="bold"
+					android:text="0x0"
+					android:focusable="false"
+					android:gravity="center"
+					android:layout_weight="1"
+					></EditText>			
+	</LinearLayout>			
+			
+<!-- Area 4 -->	
+	<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+			android:layout_width="fill_parent"
+			android:layout_height="fill_parent"
+			android:background="#101010"
+			android:layout_weight="2"
+			>
+
+	    	<LinearLayout
+	    	    xmlns:android="http://schemas.android.com/apk/res/android"
+	    	    android:layout_width="fill_parent"
+	    	    android:layout_height="wrap_content"
+	    	    android:layout_gravity="center_vertical"
+	    	    android:orientation="vertical" >
+
+			<Button android:id="@+id/resetbutton"
+		 			android:layout_height="fill_parent"
+		 			android:layout_width="fill_parent"
+		 			android:layout_gravity="center_horizontal"
+		 			android:layout_margin="1dp"
+		 			android:background="@drawable/button_pattern_reset"
+		 			android:layout_weight="1"
+		 			android:text="Reset"
+		 			/>	    	
+			</LinearLayout>
+			
+	</LinearLayout>		
+	
+	
+</LinearLayout>
+	
+
+	
+	
+	
+	
+	<!--  
+	<ToggleButton android:id="@+id/toggleButton"
+				 android:layout_height="wrap_content"
+				 android:layout_width="wrap_content" 
+				android:textOn="ON"
+				 android:textOff="OFF"
+				 >
+	</ToggleButton>
+     -->
+
+
+</LinearLayout>
