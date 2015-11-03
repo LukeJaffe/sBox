@@ -1,10 +1,10 @@
 /home/jaffe5/Projects/capstone/code/sBox/http_app/bin/classes.dex : \
+/home/jaffe5/Projects/capstone/code/sBox/http_app/bin/classes/com/iface/NetworkClass$LoginTask.class \
 /home/jaffe5/Projects/capstone/code/sBox/http_app/bin/classes/com/iface/NetworkInterface.class \
+/home/jaffe5/Projects/capstone/code/sBox/http_app/bin/classes/com/iface/NetworkClass$1.class \
 /home/jaffe5/Projects/capstone/code/sBox/http_app/bin/classes/com/iface/NetworkClass.class \
 /home/jaffe5/Projects/capstone/code/sBox/http_app/bin/classes/com/networking/R$attr.class \
 /home/jaffe5/Projects/capstone/code/sBox/http_app/bin/classes/com/networking/TestProjActivity.class \
-/home/jaffe5/Projects/capstone/code/sBox/http_app/bin/classes/com/networking/TestProjActivity$DownloadWebpageTask.class \
-/home/jaffe5/Projects/capstone/code/sBox/http_app/bin/classes/com/networking/TestProjActivity$1.class \
 /home/jaffe5/Projects/capstone/code/sBox/http_app/bin/classes/com/networking/BuildConfig.class \
 /home/jaffe5/Projects/capstone/code/sBox/http_app/bin/classes/com/networking/R$string.class \
 /home/jaffe5/Projects/capstone/code/sBox/http_app/bin/classes/com/networking/R$drawable.class \

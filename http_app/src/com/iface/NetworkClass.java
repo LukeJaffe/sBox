@@ -1,52 +1,57 @@
 package com.iface;
 
+import android.util.Log;
+import android.net.ConnectivityManager;
+import android.net.NetworkInfo;
+import android.app.Activity;
+import android.os.Bundle;
+import android.os.AsyncTask;
+import android.view.View;
+import android.view.Menu;
+import android.view.MenuItem;
+import android.view.MenuInflater;
+import android.content.Intent;
+import android.content.Context;
+import android.widget.EditText;
+
+import java.io.IOException;
+import java.io.UnsupportedEncodingException;
+import java.io.Reader;
+import java.io.InputStream;
+import java.io.InputStreamReader;
+
+import java.util.Map;
+import java.util.LinkedHashMap;
+
+import java.net.URLEncoder;
+import java.net.URL;
+import java.net.HttpURLConnection;
+
+
 public class NetworkClass implements NetworkInterface
 {
+    private static final String DEBUG_TAG = "HttpEx2";
+
     public static void main(String[] args)
     {
         System.out.println(SERVER_IP);
     }
 
-    public int login(String username, String password)
+    public void login(String username, String password)
     {
-        return 0;
+        new LoginTask().execute(username, password);
     }
-
-        public void sendMessage(View view)
-    {   
-        /*
-        Intent intent = new Intent(this, DisplayMessageActivity.class);
-        EditText editText = (EditText) findViewById(R.id.edit_message);
-        String message = editText.getText().toString();
-        intent.putExtra(EXTRA_MESSAGE, message);
-        startActivity(intent);
-        */
-        // Gets the URL from the UI's text field.
-        //String stringUrl = "http://76.19.98.37/basic.php?p1=test";
-        String stringUrl = "http://76.19.98.37/webservice/login.php";
-        ConnectivityManager connMgr = (ConnectivityManager) 
-            getSystemService(Context.CONNECTIVITY_SERVICE);
-        NetworkInfo networkInfo = connMgr.getActiveNetworkInfo();
-        if (networkInfo != null && networkInfo.isConnected()) {
-            Log.d(DEBUG_TAG, "Attempting to download webpage...");
-            new DownloadWebpageTask().execute(stringUrl);
-        } else {
-            Log.d(DEBUG_TAG, "No network connection available.");
-        }
-    }   
 
      // Uses AsyncTask to create a task away from the main UI thread. This task takes a 
      // URL string and uses it to create an HttpUrlConnection. Once the connection
      // has been established, the AsyncTask downloads the contents of the webpage as
      // an InputStream. Finally, the InputStream is converted into a string, which is
      // displayed in the UI by the AsyncTask's onPostExecute method.
-     private class DownloadWebpageTask extends AsyncTask<String, Void, String> {
+     private class LoginTask extends AsyncTask<String, Void, String> {
         @Override
-        protected String doInBackground(String... urls) {
-
-            // params comes from the execute() call: params[0] is the url.
+        protected String doInBackground(String ... args) {
             try {
-                return postUrl(urls[0]);
+                return loginPostRequest(args[0], args[1]);
             } catch (IOException e) {
                 return "Unable to retrieve web page. URL may be invalid.";
             }
@@ -59,7 +64,7 @@ public class NetworkClass implements NetworkInterface
     }
 
 
-    private String postUrl(String myurl) throws IOException 
+    private String loginPostRequest(String username, String password) throws IOException 
     {
         InputStream is = null;
         // Only display the first 500 characters of the retrieved
@@ -67,10 +72,10 @@ public class NetworkClass implements NetworkInterface
         int len = 500;
 
         try {
-            URL url = new URL(myurl);
+            URL url = new URL(LOGIN_URL);
             Map<String,Object> params = new LinkedHashMap();
-            params.put("username", "testuser");
-            params.put("password", "testpass");
+            params.put("username", username);
+            params.put("password", password);
 
             StringBuilder postData = new StringBuilder();
             for (Map.Entry<String,Object> param : params.entrySet()) {
