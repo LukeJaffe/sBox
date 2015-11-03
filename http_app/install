@@ -1,0 +1,3 @@
+#!/bin/bash
+#adb -d install /home/jaffe5/Projects/android/test_app/bin/TestAndroidProj-debug.apk
+ant clean debug install
