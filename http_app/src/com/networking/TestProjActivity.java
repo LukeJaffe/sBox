@@ -1,40 +1,20 @@
 package com.networking;
 
 import android.util.Log;
-import android.net.ConnectivityManager;
-import android.net.NetworkInfo;
-import android.app.Activity;
 import android.os.Bundle;
-import android.os.AsyncTask;
 import android.view.View;
 import android.view.Menu;
 import android.view.MenuItem;
 import android.view.MenuInflater;
 import android.content.Intent;
-import android.content.Context;
 import android.widget.EditText;
-
-import java.io.IOException;
-import java.io.UnsupportedEncodingException;
-import java.io.Reader;
-import java.io.InputStream;
-import java.io.InputStreamReader;
-
-import java.util.Map;
-import java.util.LinkedHashMap;
-
-import java.net.URLEncoder;
-import java.net.URL;
-import java.net.HttpURLConnection;
 
 import com.iface.NetworkClass;
 
-public class TestProjActivity extends Activity
+public class TestProjActivity extends NetworkClass
 {
     private static final String DEBUG_TAG = "HttpEx2";
     public final static String EXTRA_MESSAGE = "com.example.TestProjActivity.MESSAGE";
-
-    public NetworkClass serverInterface;
 
     /** Called when the activity is first created. */
     @Override
@@ -45,9 +25,6 @@ public class TestProjActivity extends Activity
 
         // Enable the app icon as the Up button
         getActionBar().setDisplayHomeAsUpEnabled(true);
-
-        // Set up NetworkClass
-        serverInterface = new NetworkClass(this);
     }
 
     @Override
@@ -76,16 +53,9 @@ public class TestProjActivity extends Activity
         }
     }
 
-    /* Called when the user clicks the Send button */
-    public void sendMessage(View view)
+    /* Called when the user clicks the Login button */
+    public void loginCall(View view)
     {
-        /*
-        Intent intent = new Intent(this, DisplayMessageActivity.class);
-        EditText editText = (EditText) findViewById(R.id.username_field);
-        String message = editText.getText().toString();
-        intent.putExtra(EXTRA_MESSAGE, message);
-        startActivity(intent);
-        */
         // Get username
         EditText usernameText = (EditText) findViewById(R.id.username_field);
         String username = usernameText.getText().toString();
@@ -93,18 +63,13 @@ public class TestProjActivity extends Activity
         EditText passwordText = (EditText) findViewById(R.id.password_field);
         String password = passwordText.getText().toString();
         // Attempt login
-        ConnectivityManager connMgr = (ConnectivityManager) 
-        getSystemService(Context.CONNECTIVITY_SERVICE);
-        NetworkInfo networkInfo = connMgr.getActiveNetworkInfo();
-        if (networkInfo != null && networkInfo.isConnected()) 
-        {
-            Log.d(DEBUG_TAG, "Username: "+username);
-            Log.d(DEBUG_TAG, "Password: "+password);
-            serverInterface.login(username, password);
-        } 
-        else 
-        {
-            Log.d(DEBUG_TAG, "No network connection available.");
-        }
+        login(username, password);
+    }
+
+    public void loginCallback(int success, String message)
+    {
+        Intent intent = new Intent(context(), DisplayMessageActivity.class);
+        intent.putExtra(EXTRA_MESSAGE, message);
+        startActivity(intent);
     }
 }

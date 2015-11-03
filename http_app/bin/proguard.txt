@@ -5,5 +5,5 @@
 -keep class com.networking.TestProjActivity { <init>(...); }
 
 # onClick res/layout/main.xml #generated:19
--keepclassmembers class * { *** sendMessage(...); }
+-keepclassmembers class * { *** loginCall(...); }
 

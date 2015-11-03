@@ -1,5 +1,7 @@
 package com.iface;
 
+import org.json.*;
+
 import android.util.Log;
 import android.net.ConnectivityManager;
 import android.net.NetworkInfo;
@@ -29,25 +31,36 @@ import java.net.HttpURLConnection;
 
 import com.networking.DisplayMessageActivity;
 
-public class NetworkClass implements NetworkInterface
+public class NetworkClass extends Activity implements NetworkInterface
 {
     public final static String EXTRA_MESSAGE = "com.example.TestProjActivity.MESSAGE";
     private static final String DEBUG_TAG = "HttpEx2";
-    public Activity parent;
 
     public static void main(String[] args)
     {
         System.out.println(SERVER_IP);
     }
 
-    public NetworkClass(Activity parent)
-    {
-        this.parent = parent;
-    }
-
     public void login(String username, String password)
     {
-        new LoginTask().execute(username, password);
+        ConnectivityManager connMgr = (ConnectivityManager)
+        getSystemService(Context.CONNECTIVITY_SERVICE);
+        NetworkInfo networkInfo = connMgr.getActiveNetworkInfo();
+        if (networkInfo != null && networkInfo.isConnected())
+        {
+            Log.d(DEBUG_TAG, "Username: "+username);
+            Log.d(DEBUG_TAG, "Password: "+password);
+            new LoginTask().execute(username, password);
+        }
+        else
+        {
+            Log.d(DEBUG_TAG, "No network connection available.");
+        }
+    }
+
+    public Activity context()
+    {
+        return this;
     }
 
      // Uses AsyncTask to create a task away from the main UI thread. This task takes a 
@@ -55,7 +68,8 @@ public class NetworkClass implements NetworkInterface
      // has been established, the AsyncTask downloads the contents of the webpage as
      // an InputStream. Finally, the InputStream is converted into a string, which is
      // displayed in the UI by the AsyncTask's onPostExecute method.
-     private class LoginTask extends AsyncTask<String, Void, String> {
+     private class LoginTask extends AsyncTask<String, Void, String> 
+     {
         @Override
         protected String doInBackground(String ... args) 
         {
@@ -72,14 +86,21 @@ public class NetworkClass implements NetworkInterface
         @Override
         protected void onPostExecute(String result) 
         {
-            Log.d(DEBUG_TAG, "Reached onPostExecute!");
-            Log.d(DEBUG_TAG, result);
-            Intent intent = new Intent(parent, DisplayMessageActivity.class);
-            intent.putExtra(EXTRA_MESSAGE, result);
-            parent.startActivity(intent);
+            try
+            {
+                JSONObject obj = new JSONObject(result);
+                int success = obj.getInt("success");
+                String message = obj.getString("message");
+                loginCallback(success, message);
+            }
+            catch (JSONException e)
+            {
+                Log.d(DEBUG_TAG, "JSON error {onPostExecute}");
+            }
         }
     }
 
+    public void loginCallback(int success, String message) {}
 
     private String loginPostRequest(String username, String password) throws IOException 
     {
