@@ -1,0 +1,26 @@
+Set up xserver to see GUIs on remote host:
+-google set up xserver on Mac
+
+Connect to server:
+ssh -X akpona1@76.19.98.37
+
+Home directory:
+cd ~/
+
+Capstone directory:
+cd ~/Capstone/
+
+Server directory:
+cd ~/Capstone/server/
+
+Docroot directory:
+cd ~/Capstone/server/docroot/
+
+Show files:
+ls
+
+Open file in text editor (gedit):
+gedit file_name
+
+To copy a file into the docroot:
+scp file_name akpona1@76.19.98.37:~/Capstone/server/docroot/

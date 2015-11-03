@@ -1,5 +1,6 @@
 //User must modify the below package with their package name
-package com.GPIODemo; 
+package com.GPIOConsole; 
+
 import java.io.FileDescriptor;
 import java.io.FileInputStream;
 import java.io.FileOutputStream;
@@ -19,6 +20,7 @@ import android.os.ParcelFileDescriptor;
 import android.util.Log;
 import android.widget.Toast;
 
+import com.sss.consolehelper.CmdApp;
 
 /******************************FT311 GPIO interface class******************************************/
 public class FT311GPIOInterface extends Activity
@@ -46,8 +48,9 @@ public class FT311GPIOInterface extends Activity
     public static String VersionString = "mVersion=1.0";	
 		
 		/*constructor*/
-	 public FT311GPIOInterface(Context context){
+	 public FT311GPIOInterface(Context context, CmdApp console){
 		 	super();
+            console.stdOut.println("gpio1");
 		 	global_context = context;
 			/*shall we start a thread here or what*/
 			usbdata = new byte[4]; 
@@ -143,7 +146,6 @@ public class FT311GPIOInterface extends Activity
 
 			UsbAccessory accessory = (accessories == null ? null : accessories[0]);
 			if (accessory != null) {
-                /*
 				if( -1 == accessory.toString().indexOf(ManufacturerString))
 				{
 					Toast.makeText(global_context, "Manufacturer is not matched!", Toast.LENGTH_SHORT).show();
@@ -161,7 +163,7 @@ public class FT311GPIOInterface extends Activity
 					Toast.makeText(global_context, "Version is not matched!", Toast.LENGTH_SHORT).show();
 					return;
 				}
-				*/
+				
 				Toast.makeText(global_context, "Manufacturer, Model & Version are matched!", Toast.LENGTH_SHORT).show();
 
 				if (usbmanager.hasPermission(accessory)) {
