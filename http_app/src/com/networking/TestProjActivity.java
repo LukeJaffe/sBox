@@ -31,7 +31,7 @@ import com.iface.NetworkClass;
 
 public class TestProjActivity extends Activity
 {
-    private static final String DEBUG_TAG = "HttpExample";
+    private static final String DEBUG_TAG = "HttpEx2";
     public final static String EXTRA_MESSAGE = "com.example.TestProjActivity.MESSAGE";
 
     public NetworkClass serverInterface;
@@ -47,7 +47,7 @@ public class TestProjActivity extends Activity
         getActionBar().setDisplayHomeAsUpEnabled(true);
 
         // Set up NetworkClass
-        serverInterface = new NetworkClass();
+        serverInterface = new NetworkClass(this);
     }
 
     @Override
@@ -79,13 +79,28 @@ public class TestProjActivity extends Activity
     /* Called when the user clicks the Send button */
     public void sendMessage(View view)
     {
+        /*
+        Intent intent = new Intent(this, DisplayMessageActivity.class);
+        EditText editText = (EditText) findViewById(R.id.username_field);
+        String message = editText.getText().toString();
+        intent.putExtra(EXTRA_MESSAGE, message);
+        startActivity(intent);
+        */
+        // Get username
+        EditText usernameText = (EditText) findViewById(R.id.username_field);
+        String username = usernameText.getText().toString();
+        // Get password
+        EditText passwordText = (EditText) findViewById(R.id.password_field);
+        String password = passwordText.getText().toString();
+        // Attempt login
         ConnectivityManager connMgr = (ConnectivityManager) 
         getSystemService(Context.CONNECTIVITY_SERVICE);
         NetworkInfo networkInfo = connMgr.getActiveNetworkInfo();
         if (networkInfo != null && networkInfo.isConnected()) 
         {
-            Log.d(DEBUG_TAG, "Attempting to download webpage...");
-            serverInterface.login("testuser", "testpass");
+            Log.d(DEBUG_TAG, "Username: "+username);
+            Log.d(DEBUG_TAG, "Password: "+password);
+            serverInterface.login(username, password);
         } 
         else 
         {

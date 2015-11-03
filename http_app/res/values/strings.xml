@@ -1,8 +1,9 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
     <string name="app_name">http</string>
-    <string name="edit_message">Enter a *new* message</string>
-    <string name="button_send">Send</string>
+    <string name="username_field">Username</string>
+    <string name="password_field">Password</string>
+    <string name="button_send">Login</string>
     <string name="action_settings">Settings</string>
     <string name="title_activity_main">MainActivity</string>
     <string name="title_activity_display_message">My Message</string>

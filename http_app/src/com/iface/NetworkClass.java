@@ -27,14 +27,22 @@ import java.net.URLEncoder;
 import java.net.URL;
 import java.net.HttpURLConnection;
 
+import com.networking.DisplayMessageActivity;
 
 public class NetworkClass implements NetworkInterface
 {
+    public final static String EXTRA_MESSAGE = "com.example.TestProjActivity.MESSAGE";
     private static final String DEBUG_TAG = "HttpEx2";
+    public Activity parent;
 
     public static void main(String[] args)
     {
         System.out.println(SERVER_IP);
+    }
+
+    public NetworkClass(Activity parent)
+    {
+        this.parent = parent;
     }
 
     public void login(String username, String password)
@@ -49,18 +57,27 @@ public class NetworkClass implements NetworkInterface
      // displayed in the UI by the AsyncTask's onPostExecute method.
      private class LoginTask extends AsyncTask<String, Void, String> {
         @Override
-        protected String doInBackground(String ... args) {
-            try {
+        protected String doInBackground(String ... args) 
+        {
+            try 
+            {
                 return loginPostRequest(args[0], args[1]);
-            } catch (IOException e) {
+            } 
+            catch (IOException e) 
+            {
                 return "Unable to retrieve web page. URL may be invalid.";
             }
         }
         // onPostExecute displays the results of the AsyncTask.
         @Override
-        protected void onPostExecute(String result) {
+        protected void onPostExecute(String result) 
+        {
+            Log.d(DEBUG_TAG, "Reached onPostExecute!");
             Log.d(DEBUG_TAG, result);
-       }
+            Intent intent = new Intent(parent, DisplayMessageActivity.class);
+            intent.putExtra(EXTRA_MESSAGE, result);
+            parent.startActivity(intent);
+        }
     }
 
 

@@ -4,6 +4,6 @@
 # view AndroidManifest.xml #generated:16
 -keep class com.networking.TestProjActivity { <init>(...); }
 
-# onClick res/layout/main.xml #generated:13
+# onClick res/layout/main.xml #generated:19
 -keepclassmembers class * { *** sendMessage(...); }
 
