@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="app_name">BoxApp</string>
+    <string name="text_view">KRONOS</string>
+    <string name="unlock_button">Unlock</string>
+    <string name="action_settings">Settings</string>
+    <string name="title_activity_main">MainActivity</string>
+    <string name="title_activity_display_message">My Message</string>
+    <string name="action_search">Search</string>
+</resources>

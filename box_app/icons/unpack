@@ -1,0 +1,5 @@
+#!/bin/bash
+cp ${1}/android/drawable-ldpi/*.png ../res/drawable-ldpi/ 2>/dev/null || :
+cp ${1}/android/drawable-mdpi/*.png ../res/drawable-mdpi/ 2>/dev/null || :
+cp ${1}/android/drawable-hdpi/*.png ../res/drawable-hdpi/ 2>/dev/null || :
+cp ${1}/android/drawable-xhdpi/*.png ../res/drawable-xhdpi/ 2>/dev/null || :
